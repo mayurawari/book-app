@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "status": "pm2 monit"
   },
   "keywords": [],
   "author": "",
@@ -15,11 +16,18 @@
   "dependencies": {
     "bcrypt": "^5.1.1",
     "dotenv": "^16.4.5",
+    "events": "^3.3.0",
     "express": "^4.19.2",
+    "express-winston": "^4.2.0",
+    "fast-csv": "^5.0.1",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.8.0",
     "mongoose": "^8.4.5",
     "mysql2": "^3.10.2",
-    "sequelize": "^6.37.3"
+    "nodemailer": "^6.9.14",
+    "pm2": "^5.4.2",
+    "sequelize": "^6.37.3",
+    "socket.io": "^4.7.5",
+    "winston": "^3.13.1"
   }
 }

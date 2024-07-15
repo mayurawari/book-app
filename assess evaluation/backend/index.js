@@ -6,6 +6,9 @@ import userroute from "./src/routes/userroute.js";
 import auth from "./src/middlewares/auth.js";
 import bookroute from "./src/routes/bookroute.js";
 import orderroute from "./src/routes/orderroute.js";
+import logger from "./src/logs/logger.js";
+import { format } from "sequelize/lib/utils";
+import stream from "node:stream";
 config();
 // implement the server here 
 const server=express();
@@ -15,11 +18,14 @@ const url=process.env.URl;
 server.use(express.json());
 server.use("/api",userroute);
 server.use("/api/store",auth,bookroute);
-server.use("/api/details",auth,orderroute);
+server.use("/api/details",orderroute);
 
 server.get("/",(req,res)=>{
   res.send("this is home route");
+  logger.log("this is home route logs");
 })
+
+
 
 server.listen(port,async()=>{
 try {

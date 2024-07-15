@@ -4,16 +4,19 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { config } from "dotenv";
 import blackmodel from "../config/models/blacklist.js";
+import logger from "../logs/logger.js";
 config();
 const userroute = Router();
 const key = process.env.SECRET_KEY;
 
 //register user
 userroute.post("/register", async (req, res) => {
-
+    
     const { username, password } = req.body;
-
+    
     try {
+        logger.info("logs from userroute");
+        logger.error("error logs from userrroute");
         const existuser = await usermodel.findOne({ username: username });
 
         if (existuser) {

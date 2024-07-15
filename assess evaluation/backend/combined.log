@@ -1,0 +1,24 @@
+{
+  message: 'logs from userroute',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2024-07-15T10:56:22.660Z'
+}
+{
+  message: 'error logs from userrroute',
+  level: 'error',
+  label: 'right meow!',
+  timestamp: '2024-07-15T10:56:22.670Z'
+}
+{
+  message: 'logs from orderrroute',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2024-07-15T10:56:22.790Z'
+}
+{
+  message: 'error logs from orderrroute',
+  level: 'error',
+  label: 'right meow!',
+  timestamp: '2024-07-15T10:56:22.791Z'
+}

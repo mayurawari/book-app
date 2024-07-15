@@ -18,7 +18,7 @@ const ordermodel = connectsql.define('orderinfo', {
 
     }
 },{
-    Timestamp:false
+    timestamps:false
 });
 
 connectsql.sync({ force: true });
